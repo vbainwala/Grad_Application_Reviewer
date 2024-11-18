@@ -1,0 +1,136 @@
+import requests
+from bs4 import BeautifulSoup
+import re
+from urllib.parse import urljoin
+
+class ColumbiaProfessorScraper:
+    def __init__(self, base_url):
+        """
+        Initialize the scraper with base URL
+        
+        Parameters:
+        base_url (str): Base URL of the professor's website
+        """
+        self.base_url = base_url
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+    
+    def _make_request(self, url):
+        """Make HTTP request and return soup object"""
+        try:
+            response = requests.get(url, headers=self.headers)
+            response.raise_for_status()
+            return BeautifulSoup(response.text, 'html.parser')
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching {url}: {e}")
+            return None
+    
+    def get_main_page_info(self):
+        """Extract information from the main page"""
+        soup = self._make_request(self.base_url)
+        if not soup:
+            return None
+        
+        results = {
+            'basic_info': {},
+            'research_interests': [],
+            'current_position': None,
+            'contact_info': {}
+        }
+        
+        # Get basic information
+        header = soup.find('header', id='header')
+        if header:
+            info_div = header.find('div', class_='info')
+            if info_div:
+                results['current_position'] = ' '.join(info_div.get_text().strip().split())
+        
+        # Get research interests from preamble
+        preamble = soup.find('div', class_='preamble')
+        if preamble:
+            results['research_interests'] = [p.get_text().strip() for p in preamble.find_all('p')]
+        
+        return results
+    
+    def get_faq_info(self):
+        """Extract information from the FAQ page"""
+        faq_url = urljoin(self.base_url, 'faq.html')
+        soup = self._make_request(faq_url)
+        if not soup:
+            return None
+        
+        faq_info = {
+            'phd_requirements': [],
+            'application_process': [],
+            'general_info': []
+        }
+        
+        # Extract FAQ content
+        main_content = soup.find('main')
+        if main_content:
+            # Find all questions and answers
+            for section in main_content.find_all(['h3', 'p']):
+                text = section.get_text().strip()
+                
+                # Categorize based on content
+                if any(keyword in text.lower() for keyword in ['phd', 'graduate', 'student']):
+                    faq_info['phd_requirements'].append(text)
+                elif any(keyword in text.lower() for keyword in ['apply', 'application', 'admission']):
+                    faq_info['application_process'].append(text)
+                else:
+                    faq_info['general_info'].append(text)
+        
+        return faq_info
+    
+    def get_teaching_info(self):
+        """Extract teaching information"""
+        soup = self._make_request(self.base_url)
+        if not soup:
+            return None
+        
+        teaching_section = soup.find('section', id='teaching')
+        if teaching_section:
+            courses = []
+            teaching_div = teaching_section.find('div', class_='teaching')
+            if teaching_div:
+                for course in teaching_div.find_all('a'):
+                    courses.append({
+                        'name': course.get_text(),
+                        'url': urljoin(self.base_url, course.get('href', ''))
+                    })
+            return courses
+        return None
+
+def main():
+    base_url = "https://www.cs.columbia.edu/~djhsu/"  # Replace with actual URL
+    scraper = ColumbiaProfessorScraper(base_url)
+    
+    # Get main page information
+    main_info = scraper.get_main_page_info()
+    if main_info:
+        print("\n=== Basic Information ===")
+        print(main_info['current_position'])
+        print("\n=== Research Interests ===")
+        for interest in main_info['research_interests']:
+            print(f"- {interest}")
+    
+    # Get FAQ information
+    faq_info = scraper.get_faq_info()
+    if faq_info:
+        print("\n=== PhD Requirements ===")
+        for req in faq_info['phd_requirements']:
+            print(f"- {req}")
+        print("\n=== Application Process ===")
+        for process in faq_info['application_process']:
+            print(f"- {process}")
+    
+    # Get teaching information
+    teaching_info = scraper.get_teaching_info()
+    if teaching_info:
+        print("\n=== Teaching ===")
+        for course in teaching_info:
+            print(f"- {course['name']} ({course['url']})")
+
+if __name__ == "__main__":
+    main()
