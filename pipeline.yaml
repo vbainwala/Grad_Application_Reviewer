@@ -15,7 +15,7 @@ operations:
       Analyze the following transcript of a student's grad school application:
       {{ input.src }}
       Extract and list all important attributes in the student application.
-      If no medications are mentioned, return an empty list.
+      
 
   - name: unnest_important_attributes
     type: unnest
@@ -57,9 +57,9 @@ pipeline:
       input: apps
       operations:
         - extract_important_attributes
-        - unnest_important_attributes
-        - resolve_attributes
-        - summarize_attributes_for_each_profile
+       # - unnest_important_attributes
+       # - resolve_attributes
+       # - summarize_attributes_for_each_profile
   output:
     type: file
     path: grad_school_app_summaries.json
