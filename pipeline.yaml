@@ -1,0 +1,66 @@
+datasets:
+  apps:
+    path: student_apps.json
+    type: file
+
+default_model: gpt-4o-mini
+
+operations:
+  - name: extract_important_attributes
+    type: map
+    output:
+      schema:
+        attributes: list[str]
+    prompt: |
+      Analyze the following transcript of a student's grad school application:
+      {{ input.src }}
+      Extract and list all important attributes in the student application.
+      If no medications are mentioned, return an empty list.
+
+  - name: unnest_important_attributes
+    type: unnest
+    unnest_key: attributes
+
+  - name: resolve_attributes
+    type: resolve
+    blocking_keys:
+      - attributes
+    blocking_threshold: 0.6162
+    comparison_prompt: |
+      Compare the following two attributes:
+      Entry 1: {{ input1.medication }} ##### Change this
+      Entry 2: {{ input2.medication }} ##### change this 
+      Are these attributes likely to be the same or closely related?
+    embedding_model: text-embedding-3-small
+    output:
+      schema:
+        attributes: str
+    resolution_prompt: |
+      
+      Determine the most important attribute for this student's profile. The resolved
+      name should be a standardized, widely recognized attribute name that best represents the student's application.
+
+  - name: summarize_attributes_for_each_profile
+    type: reduce
+    reduce_key:
+      - medication
+    output:
+      schema:
+        side_effects: str
+        uses: str
+    prompt: |
+      Include prompt for final edit
+
+pipeline:
+  steps:
+    - name: grad_school_app_extraction
+      input: apps
+      operations:
+        - extract_important_attributes
+        - unnest_important_attributes
+        - resolve_attributes
+        - summarize_attributes_for_each_profile
+  output:
+    type: file
+    path: grad_school_app_summaries.json
+    intermediate_dir: intermediate_results
