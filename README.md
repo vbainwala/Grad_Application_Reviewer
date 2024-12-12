@@ -24,7 +24,7 @@ The <b>LLM Agent</b> is designed to streamline the review of graduate applicatio
             "Resume": "String value"
         }
     },
-    ...
+    
 ]
 ```
 
@@ -56,7 +56,7 @@ Define professor profiles in JSON format as follows:
     "name": "Professor Name",
     "research_interests": "str containing research interests"
   },
-  ...
+  
 ]
 ```
 Save the professor profiles for use in the application review process to `professors.json`
