@@ -18,10 +18,10 @@ The <b>LLM Agent</b> is designed to streamline the review of graduate applicatio
 ```json
 [
     {
-        "ID": <Unique Identifier for Applicant>,
+        "ID": "Unique Identifier for Applicant",
         "Application": {
-            "SOP": <String value>,
-            "Resume": <String value>
+            "SOP": "String value",
+            "Resume": "String value"
         }
     },
     ...
@@ -53,8 +53,8 @@ Define professor profiles in JSON format as follows:
 ```json
 [
   {
-    "name": <Professor Name>,
-    "research_interests": <str containing research interests>
+    "name": "Professor Name",
+    "research_interests": "str containing research interests"
   },
   ...
 ]
