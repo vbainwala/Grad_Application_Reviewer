@@ -1,0 +1,10 @@
+Dataset/
+intermediate_results/
+json_documents/
+Pipelines/
+Spring_2025_Applications/
+COMS6998_Project.code-workspace
+grad_school_app_summaries_ui.json
+grad_school_app_summaries.json
+.env
+Scripts/Deprecated/
