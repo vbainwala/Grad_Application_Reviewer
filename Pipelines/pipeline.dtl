@@ -1,0 +1,81 @@
+{
+  "docetl_autoOptimizeCheck": false,
+  "docetl_bookmarks": [],
+  "docetl_cost": 0,
+  "docetl_currentFile": {
+    "name": "merged_file.json",
+    "path": "json_documents/merged_file.json",
+    "type": "json"
+  },
+  "docetl_defaultModel": "gpt-4o-mini",
+  "docetl_files": [
+    {
+      "name": "merged_file.json",
+      "path": "json_documents/merged_file.json",
+      "type": "json"
+    }
+  ],
+  "docetl_highLevelGoal": "",
+  "docetl_isLoadingOutputs": false,
+  "docetl_numOpRun": 1,
+  "docetl_operations": [
+    {
+      "id": "74f20d4b-1555-409c-a27b-c4b7d2d98f42",
+      "llmType": "LLM",
+      "type": "map",
+      "name": "extract_research_fit",
+      "prompt": "Analyze the following personal statement and recommendation letters for {{ input.ID }}:\n \n Personal Statement\n {{ input.Application.SOP }}\n\n Recommendation Letters:\n {{input.Application.Recommendation_Letters}}\n\n Extract the main research experience discussed in the personal statement in the form of projects and research done in the past\n and the technical skills applied in the project of the applicant along with a description of the project/research and collaboration skills.\n Make sure you pick your project details from the provided personal statement only. Categorise the research experience based on the different areas of research \n provided by the student in the {{input.Application.Research_Areas}}\n Return a list of research experience and corresponding skills, description and collaboration skills in the following format:\n [\n   \"research area\": \"Research Area from the application,\n   \"details\":{\n               {\n                 \"experience\": \"Research Experience 1/Project\",\n                 \"skills\": \"Applicant's associated technical skills\",\n                 \"description\": \"project description\",\n                 \"collaboration\": \"description of collaboration skills\",\n                 \"recommendation\": \"Matching information in the recommendation letter\"\n               },\n               {\n                 \"experience\": \"Research Experience 2/Project\",\n                 \"skills\": \"Applicant's associated technical skills\",\n                 \"description\": \"Project description\",\n                 \"collaboration\": \"description of collaboration skills\",\n                 \"recommendation\": \"Matching information in the recommendation letter\"\n               }, \n   },\n   .....\n ]\n",
+      "output": {
+        "schema": [
+          {
+            "key": "results",
+            "type": "list",
+            "subType": {
+              "key": "0",
+              "type": "dict",
+              "subType": [
+                {
+                  "key": "research area",
+                  "type": "string"
+                },
+                {
+                  "key": "details",
+                  "type": "dict",
+                  "subType": [
+                    {
+                      "key": "experience",
+                      "type": "string"
+                    },
+                    {
+                      "key": "skills",
+                      "type": "string"
+                    },
+                    {
+                      "key": "description",
+                      "type": "string"
+                    },
+                    {
+                      "key": "collaboration",
+                      "type": "string"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "otherKwargs": {},
+      "runIndex": 1
+    }
+  ],
+  "docetl_optimizerModel": "gpt-4o-mini",
+  "docetl_output": {
+    "operationId": "74f20d4b-1555-409c-a27b-c4b7d2d98f42",
+    "path": "/Users/vareeshbainwala/.docetl/pipelines/pipeline/intermediates/data_processing/extract_research_fit.json",
+    "inputPath": "json_documents/merged_file.json"
+  },
+  "docetl_pipelineName": "pipeline",
+  "docetl_sampleSize": null,
+  "docetl_terminalOutput": ""
+}

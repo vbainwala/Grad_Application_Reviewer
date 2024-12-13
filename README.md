@@ -14,7 +14,6 @@ The <b>LLM Agent</b> is designed to streamline the review of graduate applicatio
 
     Use the scripts available in the scripts/preprocessing folder to convert raw input PDF files into JSON format. Ensure the output adheres to the following schema:
 
-<!-- Input documents to be sent to DocETL need to be in a specific format to use the existing pipeline. A few scripts are available in the scripts/preprocessing folder that can help convert the raw input pdfs to JSON. Below is the expected JSON schema -->
 ```json
 [
     {
@@ -42,9 +41,6 @@ The <b>LLM Agent</b> is designed to streamline the review of graduate applicatio
 2.	<b>Convert CSV to JSON</b>
 
     Use the `csv_to_json.py` script located in the scripts directory to convert the extracted CSV into a JSON file named `applications.json`.
-<!-- - Upload the created documents to the DocETL pipeline UI and use the prompt available in the Grad_Application_Review_pipeline.yaml
-- After running the pipeline download the extracted information in the csv format and run csv_to_json.py available under scripts to generate the applications.json
-- Create professor profiles to be used to perform matching of the applicants. The expected JSON schema is as follows: -->
 
 ### Step 3: Creating Professor Profiles
 
@@ -85,17 +81,3 @@ The final output includes a ranking of applicants for each professor along with 
 - Ensure all dependencies for the scripts and notebook are installed before proceeding.
 - Use the provided schemas and pipeline prompts for optimal performance.
 - For troubleshooting or further customization, refer to the documentation included with the repository.
-<!-- - Now you should be ready to run the Langchain agent to perform the application reviews
-
-- An ipython notebook available here <> contains the code required to perform the matching. 
-- The agent composes of the following chains which break down the tasks into smaller components
-```
-- parse application chain 
-- parse professor chain
-- match and rank chain
-- assign score chain
-```
-
-- The final output shows a ranking along with a score for each professor.  -->
-
-

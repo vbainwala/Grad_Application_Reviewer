@@ -1,0 +1,14 @@
+{
+  "document_name": "Millard, David (445539904).pdf",
+  "total_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "content": "LastupdatedinSeptember2024\nDavid Millard\n+ 30DormieAve,MechicvilleNY # djm3622@rit.edu (cid:132) 5188590615 (cid:240) djm3622 § djm3622\nEducation\nBS RochesterInstituteofTechnology,ComputerScienceandAppliedStatistics Sept2020–May2025\n• GPA:3.86/4.0\n• Interests:ScientificComputing,GenerativeAI,AppliedMachineLearning,\nStochasticProcesses,BayesianStatistics\n• Positions:TA/GraderforMachineLearning,DataMining,BigDataAnalyt-\nics,andComputerVision.\nRelevantExperience\nLehigh,UndergraduateResearchAssistant Bethlehem,PA\nAug2024–Present\n• Leveragedtransferlearningfromlargepretrainedimage-to-imagevariationalau-\ntoencoderstoexpeditehighdimensionalKoopmanoperatorlearning.\n• Exploringstate-of-the-artFourierneuraloperatorswithinthecontextofhighlytran-\nsientatmosphericdynamics.\nLehigh,ResearchFellowship Bethlehem,PA\n• DevelopedML-basedapproachesforacceleratingtheperformanceofiterativesolvers. June2024–Aug2024\n• AppliedKrylov-basedtechniquestoapplicationsinnumericalweatherprediction.\n• ImplementedaCUDA-enabledextensionforallNumPy-basedmethods,acceler-\natingdatacollectionby4000percent.\nAlpineSoftware,SoftwareEngineerIntern Mendon,NY\n• Performedessentialmaintenanceonthecompanycodebase, contributingwith Sept2022–May2023\nSQL,Delphi,andC#development.\n• DesigneddatapipelinesforscalablepreprocessingandefficientI/Ooperations,\nintegratingwithMicrosoftAzuredatabases,usingApacheSpark.\n• Utilized Pandas and Scikit-learn to uncover underlying structure in client data,\nleadingtonewmarketingstrategiesthatdrovesalesup20percent.\nArticles\nPresent\nPreconditionerDiscoveryviaContextualBanditReinforcementLearning\nDavidMillard\nManuscriptin-progress.\nDeepLearningforKoopmanOperatorEstimationinIdealizedAtmosphericDynamics Sept2024\nDavidMillard,ArielleCarr,StéphaneGaudreault\nManuscriptacceptedtoIEEEBigDataConferenceasashortpaper.\nData-DrivenInitialGuessSelectionforNumericalWeatherPredictionSolvers Aug2024\nDavidMillard,ArielleCarr,StéphaneGaudreault\nManuscriptacceptedtoREUSymposiumatIEEEBigDataConference.\nTechnicalSkills\nLanguages:Python,R,C#,Julia,Java,C,SQL,CUDA,Typescript,Matlab,Delphi,Lisp,Assembly\nTechnologies:PyTorch,JAX,Pandas,.NET,MicrosoftSQLServer,GCS,AWS,JMP,ApacheSpark",
+      "metadata": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  ]
+}

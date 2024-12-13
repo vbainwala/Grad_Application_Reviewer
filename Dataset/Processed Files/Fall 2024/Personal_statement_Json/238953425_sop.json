@@ -1,0 +1,30 @@
+{
+  "document_name": "Kim, Jihwan (238953425).pdf",
+  "total_pages": 3,
+  "pages": [
+    {
+      "page_number": 1,
+      "content": "Kim, Jihwan; DOB: 01/21/1991; ID: 238953425\nStatement of Purpose\nJihwan Kim\nFull Time Ph.D. in Columbia University/ 2024 Spring\nI intend to apply for a Ph.D. program at Columbia University focusing on research in\nsecurity systems and secure machine learning. My goal is to devise solutions that enhance the\nuse of cryptographic algorithms, ensuring high-security levels, and bolster the robustness and\nsecurity of machine learning.\nCurrently, I am a software engineer in the wallet R&D Group at Samsung Electronics,\ncontributing to the ‘Blockchain Keystore Project’ and ‘Digital Car Key Project’ under the\nMobile Experience Division. My role involves developing applications founded on various\ncryptographic algorithms, such as MPC and ZKP, ensuring optimal security. Recognizing my\ncontributions and potential, Samsung has granted me financial support through their internal\nfellowship program for my entire doctoral journey.\nI received my bachelor’s degree in computer science and engineering from Sogang\nUniversity in February 2015. During my undergraduate years, I was part of the Samsung\nSoftware Membership program, An initiative designed to identify and nurture IT talent at an\nearly stage. Here, I undertook several projects including Android game and note-taking\napplications. These experiences solidified my passion for smartphone – related software\nresearch, leading me to join Samsung Electronics.\nAt Samsung Electronics, I was initially with the Samsung Health group, tasked with the\nporting of sensor drivers in the Android kernel and using HAL to deliver the sensor values\nJihwan Kim\n10/07/2024 09:54 Personal Statement 1/3",
+      "metadata": {
+        "width": 612,
+        "height": 792
+      }
+    },
+    {
+      "page_number": 2,
+      "content": "Kim, Jihwan; DOB: 01/21/1991; ID: 238953425\nfrom the Android kernel to the Android framework. While implementing various protocols\nand interfaces, such as sysfs, i2c, ioctl, and so on. I delved deep into the operational\nprinciples of Android, mastering the platform architecture, which positioned me to contribute\nto diverse Android projects. Notably, as part of Samsung Health, I enhanced sensor drivers\nand algorithms for heart rate and SpO2 monitoring, innovations now utilized in the Galaxy\nWatch.\nShifting to the Blockchain R&D Group, I ventured into TrustZone development within the\nBlockchain Keystore project, sparking my interest in Blockchain research. I've played pivotal\nroles in the project, from developing signature algorithms for various cryptocurrencies to\nintegrating ZKP algorithms. I managed private keys in TrustZone so that private keys can be\nstored safely in mobile environments. I developed an application that can hold keys and\nenable signatures to be made at the TrustZone level and support third-party coin wallets. To\nelaborate, I developed an algorithm for signatures used in Bitcoin, Ethereum, Klaytn, Stellar,\nand Tron in TrustZone. In addition, I developed the logic to manage the keys in wallets such\nas BIP32, BIP44 within TrustZone. Moreover, I developed the Blockchain Keystore app to\nsupport third-party DID apps, as well as third-party wallets. I implemented the private data\nused in the Hyperledger Indy in TrustZone, and also newly implemented the ZKP algorithm\nand applied it to the app. I implemented various encryption algorithms based on a limited\nmemory and a low-level language in a secure OS environment. Moreover, currently I am\ntrying to search for journals related to the application of Multi Party Computation technology\nto the Blockchain Keystore app and also trying to implement it in TrustZone. This project is\ncurrently used in the Samsung Blockchain Keystore app. The Samsung developer homepage\nalso provides it as a SDK, thus everyone can easily use the APIs related to cryptocurrency.\nMoreover, I've been actively participating in the Digital Car Key project, collaborating with\nmultiple automobile manufacturers, in line with the standards set by the Car Connectivity\nJihwan Kim\n10/07/2024 09:54 Personal Statement 2/3",
+      "metadata": {
+        "width": 612,
+        "height": 792
+      }
+    },
+    {
+      "page_number": 3,
+      "content": "Kim, Jihwan; DOB: 01/21/1991; ID: 238953425\nConsortium (CCC). My focus here is on software that manages private keys in TrustZone,\nfacilitating encrypted communication with automobiles.\nIn the realm of security, I am particularly intrigued by vulnerabilities. I aim to explore\ngroundbreaking algorithms and methodologies that bolster machine learning model resilience\nagainst adversarial assaults, while ensuring data privacy. The research endeavors of Professor\nJunfeng Yang, particularly in secure systems and the robustness of machine learning, align\nseamlessly with my ambitions. Under his guidance, I am confident in advancing my\nknowledge, especially relating to cryptographic algorithms and their vulnerabilities. I would\nlike to enroll in a PhD program to research secure systems that operate efficiently and safely\nin mobile environments. More specifically, my aspiration is to design a platform that\ndemocratizes the use of cryptographic technologies in smartphones, particularly through\nTrustZone. I believe that Columbia University offers the perfect milieu to enhance security\ntechnology, ensuring its effective integration into various applications. Upon completing my\nPh.D., my vision is to spearhead research in security systems tailored for mobile\nenvironments, offering cryptographic algorithms fortified by machine learning and\nTrustZone.\nJihwan Kim\n10/07/2024 09:54 Personal Statement 3/3",
+      "metadata": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  ]
+}

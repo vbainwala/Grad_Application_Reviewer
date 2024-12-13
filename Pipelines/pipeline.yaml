@@ -1,0 +1,129 @@
+datasets:
+  apps:
+    path: json_documents/merged_file.json
+    type: file
+
+default_model: gpt-4o-mini
+
+operations:
+  - name: extract_research_fit
+    type: map
+    output:
+      schema:
+        results: "list[{applicant_id: str,research area: str, experience: str, skills: str, description: str, collaboration: str, recommendation: str}]"
+        # results: str
+    prompt: |
+     Analyze the following personal statement and recommendation letters for {{ input.ID }}:
+      
+      Personal Statement
+      {{ input.Application.SOP }}
+
+      Recommendation Letters:
+      {{input.Application.Recommendation_Letters}}
+
+      Extract the main research experience discussed in the personal statement in the form of projects and research done in the past
+      and the technical skills applied in the project of the applicant along with a description of the project/research and collaboration skills.
+      Make sure you pick your project details from the provided personal statement only. Categorise the research experience based on the different areas of research 
+      provided by the student in the {{input.Application.Research_Areas}}
+      Return a list of research experience and corresponding skills, description and collaboration skills in the following format:
+      [
+        {
+        "applicant_id": {{input.ID}},
+        "research area": "Research Area from the application,
+        "experience": "Research Experience 1/Project",
+        "skills": "Applicant's associated technical skills",apps
+        "description": "Detailed Description",
+        "collaboration": "description of collaboration skills",
+        "recommendation": "Matching information in the recommendation letter"
+        },
+        { 
+          "applicant_id": {{input.ID}},
+          "research_area": ""Research Area from the application",
+          "experience": "Research Experience 2/Project",
+          "skills": "Applicant's associated technical skills",
+          "description": "Project description",
+          "collaboration": "description of collaboration skills",
+          "recommendation": "Matching information in the recommendation letter"
+        }, 
+        ...
+      ]
+
+  - name: categorise_research_area
+    type: reduce
+    reduce_key: research_area
+    output:
+      schema:
+        reduce_results: str
+    prompt: |
+    Summarize the details for each {{reduce_key}} in the {{input.results}} :
+    {% for results in input %}
+    {{results.applicant_id}}
+    {% endfor %}
+
+  # - name: extract_research_context
+  #   type: map
+  #   output:
+  #     schema: 
+  #       key_concepts: list[str]
+  #   prompt: |
+  #     Given the research areas: {{input.Application.Research_Areas}}
+  #     Provide a list of relevant concepts to the research area.
+  #     Output only the list of these relevant concepts in the format
+
+  # - name: analyze_personal_statement
+  #   context: extract_research_context
+  #   type: map
+  #   output:
+  #     schema: 
+  #       results: "list[{experience: str, skills: str, academic_background: str, description: str, collaboration: str}]"
+  #       # research_experience: string
+  #       # technical_skills: string
+  #       # academic_background: string
+  #       # research_vision: string
+  #       # collaboration: string
+  #   prompt: |
+  #     You are evaluating a PhD applicant's personal statement. Focus on extracting information that demonstrates their fit for their intended research areas.
+
+  #     Personal Statement:   
+  #     "{{input.Application.SOP}}"
+
+  #     Research Context:
+  #     "{{input.Application.key_concepts}}"
+
+  #     Extract and analyze the following aspects:
+  #       1. Research Experience: Identify specific projects, methodologies, and outcomes related to their research interests
+  #       2. Technical Skills: List relevant technical skills and tools they've mastered
+  #       3. Academic Background: Extract relevant coursework and academic achievements
+  #       4. Research Vision: Summarize their proposed research direction and how it aligns with the field
+  #       5. Collaboration & Impact: Note any collaborative work or research impact
+
+  #       Format the output as a structured analysis with clear sections. Prioritize information that directly relates to their research interests.
+      
+  # # - name: summarize_results
+  # #   input: analyze_personal_statement
+  # #   type: reduce
+  # #   reduce_key: 
+  # #   output:
+  # #     schema: string
+  # #   prompt: |
+  # #     Create a concise summary of the candidate's qualifications and fit for their intended research area. 
+  # #       Focus on:
+  # #       - Strongest evidence of research capability
+  # #       - Technical preparation
+  # #       - Alignment with stated research interests
+  # #       - Potential for successful PhD research
+
+  # #       Format the output as a brief evaluation report with clear recommendations.
+
+
+pipeline:
+  steps:
+    - name: grad_school_app_extraction
+      input: apps
+      operations:
+        - extract_research_fit
+        - categorise_research_area
+  output:
+    type: file
+    path: grad_school_app_summaries.json
+    intermediate_dir: intermediate_results

@@ -1,0 +1,38 @@
+{
+  "document_name": "Yoo, Hyunwoo (729966396).pdf",
+  "total_pages": 4,
+  "pages": [
+    {
+      "page_number": 1,
+      "content": "Hyunwoo Yoo\nCONTACT Email:hty23@drexel.edu\nINFORMATION Phone:(+01)2152522342\nEDUCATION DrexelUniversity Philadelphia,UnitedStates\nGraduateStudentinElectricalandComputerEngineering September2023-Current\nSogangUniversity\nSeoul,SouthKorea\nM.S.,ComputerScienceandEngineering,\nSeptember2017-August2019\nSogangUniversity Seoul,SouthKorea\nB.S.,ComputerScienceandEngineering March2013-August2017\nMonashUniversity Victoria,Australia\nExchangeStudent,InformationTechnology February2016-June2016\nRESEARCH NaturalLanguageProcessing,Bioinformatics,NaturalLanguageUnderstanding,Large\nINTEREST LanguageModels,MachineLearning\nEXPERIENCE NaverBoostcampAITech Remote\nNaturalLanguageProcessingTrack March2022–August2023\n● Developedmovierecommendationandmoviereviewanalysissystembasedon\nColBERTandelasticsearch\nHyperlounge Seoul,SouthKorea\nBusinessPlatformteam October2022-February2023\n● Developedautomaticbusinessdatacrawlingandsummarizationsystem.\nTmaxSoftGroup Gyeonggi,SouthKorea\nERP/CRMResearchteam July2019-October2022\n● Developedalgorithmsandtoolsforembeddingsandlinkingonadvertising\ndocuments.\n● ImprovedachatbotandanOCRsystembyexploitingembeddingsandnamed\nentitytagstoaugmenttrainingdata.\n● DesignedandoptimizedtoolsandAPIsforprocessingandcorrectingincome\nstatementsandexpenseclaims.\nPUBLICATIONS H.Yoo.AdversarialExamplesforDNAClassification,arXivpreprint,2024.\nH.Yoo.FineTuningText-to-ImageDiffusionModelsforCorrectingAnomalousImages,\narXivpreprint,2024.\nH.Yoo,M.S.Refahi, R.Polikar,B.Sokhansanj,J.R.Brown,andG.Rosen.\niSeqsSearch:IncrementalProteinSearchforiBlast/iMMSeqs2/iDiamond,bioRxiv\npreprint,2024.\nMRefahi,BASokhansanj,JCMell,JBrown,HYoo,GHearne,GRosen.Scorpio:\nEnhancingEmbeddingstoImproveDownstreamAnalysisofDNAsequences,bioRxiv\npreprint,2024\nH.Yoo,B.Sokhansanj,J.R.Brown,andG.Rosen.PredictingAnti-microbialResistance\nusingLargeLanguageModels,arXivpreprint,2024.",
+      "metadata": {
+        "width": 596,
+        "height": 842
+      }
+    },
+    {
+      "page_number": 2,
+      "content": "H.Yoo,M.Kang,andK.Oh.ASemanticSearchModelUsingWordEmbedding,POS\nTagging,andNamedEntityRecognition,Inproc.oftheInternationalConferenceon\nComputationalScienceandComputationalIntelligence,2018.\nH.Yoo,S.Kim,andK.Oh.Ontology-BasedSemanticSearchSystemforMovieObject,\nInproc.ofthe20thInternationalConferenceonArtificialIntelligence,2018.\nH.Yoo,D.Kim,andT.Kim.MeasurementValueModelandSystembasedonKinect\nSensorforSittingPositionCalibration,Inproc.oftheKoreanInformationProcessing\nSocietyConference,2017.\nTEACHING TeachingAssistant,DrexelUniversity Fall2023-Fall2024\nEXPERIENCE -ECE303Lab(ECE303)\n-SeniorDesign(ECE491)\nSeptember2017-August2019\nTeachingAssistant,SogangUniversity\n-IntroductiontoArtificialIntelligence(CSE4185)\n-ComputationalThinking(COR1011)\n-CapstoneDesignII(CSE4187)\nAWARDS PatrickDewarPhDFellowshipAward February2024\nDrexelUniversity\nBestWikipediaAward January2017\nHackathon,SogangUniversity\nPrototypedHealthyComputer-TheSpineHealthCare\nSystem\nTECHNICAL ProgrammingLanguages:Python,C,C++,Java,SQL,andUNIXshellscripting\nSKILLS Toolkits:PyTorch,TensorFlow,Django,Flask,FastAPI,andSpring",
+      "metadata": {
+        "width": 596,
+        "height": 842
+      }
+    },
+    {
+      "page_number": 3,
+      "content": "Hyunwoo Yoo\nIhavebeendeeplyfascinatedbytheprocessofquantifyinghumanlanguageandhaveexplored\nvariousapplicationsofnaturallanguageprocessing(NLP).Inparticular,myacademicand\nprofessionaljourneyhasbeendrivenbyresearchoncomputationalmodelsthathelpunderstandand\ngeneratecomplexhumanlanguage.Thisjourneyhasledmetodeeplydiveintolargelanguage\nmodels(LLMs),genomicmodels,andvariousfine-tuningtechniques.\nAfterearningabachelor'sdegreeincomputerscience,Ipursuedamaster'sdegreefocusedon\nembedding-basedsemanticsearchinNLPapplications.Subsequently,Igainedpracticalexperience\natTmaxSoftGroup,applyingNLPtechnologiesintheaccountingdomain,andatHyperlounge,where\nIconductedresearchintegratingNLPwithmanagementinformationsystems(MIS).These\nexperiencesnotonlydeepenedmyunderstandingofpracticalNLPapplicationsbutalsoignitedmy\npassionforexploringthetheoreticalandtechnicalfoundationsoflanguagemodels.\nDuringtheNaverBoostcampprogram,IexploredstateoftheartLLMssuchasChatGPTandNaver\nClova,solvingrealworldchallengeslikeenhancingsearchsystemsanddataaugmentation.Thiswas\naturningpointinmyNLPresearch,revealingthetransformativepotentialofLLMsinaddressing\ndiversecomputationalproblems.\nInmycurrentgraduateprogramintheUnitedStates,Iamfocusingoncutting-edgeresearchinLLMs\nanddiffusionmodels,tacklingtechnicalchallengessuchasmemoryconstraintsduringlarge-scale\ntraining.Specifically,IhaveworkedonintegratingLoRA-basedfine-tuningtechniqueswith\nDNABERT2andNucleotideTransformertoachievesignificantperformanceimprovements.Ihave\nalsoconductedinstructiontuningfordomain-specificmodelslikeBioGPT,pioneeringaninnovative\napproachthatmergestext-basedmodelslikeBioBERTwithDNA-basedmodelslikeNucleotide\nTransformer.Inthisprocess,Iimplementedgenomicsequenceanalysisbyleveragingsequence\nalgorithmsanddatabasessuchasBLASTandMMseqs2,enablingtheutilizationofdiversenucleotide\nsequenceinformation.\nInaddition,Ihaveresearchedtextgenerationandtransformationusingdiffusionmodels.Recently,I\naddressedtheissueofgeneratingbizarreimageswithspecificpromptsbyfine-tuningdiffusion",
+      "metadata": {
+        "width": 596,
+        "height": 842
+      }
+    },
+    {
+      "page_number": 4,
+      "content": "Hyunwoo Yoo\nmodelsusingDreamBooth.Thisexplorationoftextgenerationandstyletransformationhighlightedthe\nsynergiesbetweenNLPanddiffusionmodels,furthersolidifyingmyresearchdirectiontoward\nextendingLLMandgenerativeAItechnologiesintobroaderapplications.\nMyextensiveexperienceinapplyingNLPtechnologiestovariousdomainsincludesdeveloping\npredictionandclassificationmodelsbasedonnucleotideandaminoacidsequencesintextual\nformats,designingembedding-basedsearchsystemsformappingaccountingandmanagement\nterminology,andfine-tuningdiffusionmodelswithDreamBoothtopreventabnormalimagegeneration\nfromspecificprompts.Theseexperienceshaveallowedmetopracticallyexplorethepossibilitiesof\nNLPapplicationsandgenerativeAItechnologies.\nTheworkconductedbyProfessorMcKeown’sresearchteamtointegratediffusionmodelswithNLP\nhasleftaprofoundimpressiononme.Thepotentialofdiffusionmodelsintextgenerationandstyle\ntransferinNLPresonateswiththemultimodaldataapplicationsandgenerativeAIopportunitiesIhave\nexploredinmydiffusionmodelresearch.ThiscombinationoffundamentalNLPresearchandnovel\ntechniquesalignscloselywithmyresearchgoals.\nProfessorMcKeown’sresearchontextgeneration,summarization,andsentimentanalysisprovidesa\nstrongfoundationfortacklingfundamentalproblemsinNLPandexpandingintodiverseapplication\nareas.Particularlyinspiringistheteam’sworkleveraginglargelanguagemodels(LLMs)todeeply\nanalyzethecontextandmeaningoftextdata.Ialsobelievethatmydomain-specificexpertiseand\ntechnicalskillscancontributetothefusionofgenerativeAItechnologies,includingdiffusionmodels,\nwithNLP.\nAtColumbiaUniversity,IaspiretodeepdiveintofundamentalNLPresearchwhileproposingnew\nresearchdirectionsbasedonmyextensivedomainexperienceandtechnicalskills.Ilookforwardto\njoiningyourteamtoaddresscoreNLPchallengesandbridgethegapbetweenfundamentalresearch\nandpracticalapplications.",
+      "metadata": {
+        "width": 596,
+        "height": 842
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "document_name": "He, Jiaxing (017928671).pdf",
+  "total_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "content": "He, Jiaxing; DOB: 02/18/1998; ID: 017928671\nJiaxing He\n(781)539-3142\nMeford,Massachusetts\njiaxing0218@gmail.com linkedin.com/in/jiaxing-he-43b91523b/\nEDUCATION\nMasterofDataScience GPA:3.73/4.0 Sep.2021-now\nTuftsUniversity\nBachelorofEconomicStatistic GPA:3.43/4.0 Sep.2016-Jun.2020\nGuangdongUniversityofForeignStudy\nSKILLS\nToolsandLanguages Python(Numpy,Pandas,Scipy),Spark,Pytorch,Java,Shell,Sk-learn,Git,LaTeX,\nQuantitativeResearch MachineLearning(cv2/pytorch-geometric/graphneuralnetwork/naturallanguageprocessing/computer\nvision/traditionalmachinelearning),MySQL,GoogleCloudPlatform,SPSS\nFinancialAnalysisskill CFAlevelIpassed,(straightApass)\nPUBLICATION\n1.Chen,X.,He,J.,Han,X.,Liu,L.EfficientandDegree-GuidedGraphGenerationviaDiscreteDiffusionModeling,International\nConferenceonMachineLearning(ICML)2023\nEXPERIENCE\nStudentResearchAssistant(Pytorch,VariationalAutoEncoder,LatentVariableDistribution). Sep.2022—Feb.2023\nTuftsUniversity Medford,Massachusetts\n• Generatinggraph(eg.Molecule,Network)byconductingDiffusionModel.Application:drugdiscovery,knowledgegraph\ncompletion,etc.\n• Writingcodefortheforwardprocessinadiscretediffusionmodel.Includingthesamplingfromthelatentcategorical\ndistributionanddefiningtheconvergentstateofthediffusionmodel.\n• RunningexperimentinHPCtoevaluatemodelperformanceinthestandarddatasetincludingcaveman,grid,andego,\netc.(python/diffusionmodel/shell)\n• Ourmodeloutperformedexistingbenchmarksintermsofbothmoleculelegalityandformationspeed.(alreadyacceptedin\nICML2023)\nDataAnalyst May.2020–Sep.2020\nChinaInternationalCapitalCorporationLimited Guangzhou,China\n• Featureextraction,byusingtextembeddingfromtheRobertamodel.andthenTakeadvantageofthatfeatureandconcatenate\nthefeatureandoriginalnumericalfeatureofstock(like15daysaverageprice,andbuy-inamount)togetavectortorepresent\nthestockfeature.andthenutilizeLSTM(long-short-termmemory)todomulti-targetprediction.\n• DatapreprocessingbyusingNLTKandPysparktogetthestemwordandgetridoftheuselesswordandpunctuation.\nDataAnalyst/InternofFinancialLeasingDepartment May.2019–Sep.2019\nChinaBank Guangzhou,China\n• CustomercreditratingclassificationbyusingdecisiontreeandSVM.(technique:SVM/python/sk-learn/PCA/SQL)\n• UsingA/Btesttotestifytheperformancebetweendifferentmodels.(technique:z-test/t-test/pandas/python)\n• Assistedinleasingbusinessplannegotiation,datacollection,datavisualization,etc.(excel/powerBI/python)\nPROJECTS\nComputerVisionproject/imagegenerationmodel(GAN) Jan.2022—May.2022\nTuftsUniversity Medford,Massachusetts\n• Theproject’sobjectiveistoconvertlandscapeimagesintoartisticstylesinspiredbyrenownedartistslikeVanGoghandMonet.\nAdditionally,theprojectaimstoexplorehowGenerativeAdversarialNetwork(GAN)modelscapturedatapatternsandmodify\nthemodeltoimproveitsperformance.\n• participatingindevelopingcodetomodifyboththediscriminatorandgeneratorcomponentsoftheGANmodel.(relative\ntechnique:Pytorch/neuralnetwork/sampler)\nComputerVisionproject/imageclassification Sep.2022—Dec.2022\nTuftsUniversity Medford,Massachusetts\n• ImagedatapreprocessingbyusingGaussianfilter/medianfilter,andimageresize,etc.(technique:python/cv2/sk-learn)\n• ByusingensemblelearningtodoimageclassificationontheFMNISTdataset.andchecktheperformanceanddovisualization.\n(Technique:cv2,python,scikit-learn,SVM,decisiontree,Neuralnetwork)\n10/07/2024 09:57 Resume 1/2",
+      "metadata": {
+        "width": 612,
+        "height": 792
+      }
+    },
+    {
+      "page_number": 2,
+      "content": "He, Jiaxing; DOB: 02/18/1998; ID: 017928671\nJiaxing He\n(781)539-3142\nMeford,Massachusetts\njiaxing0218@gmail.com linkedin.com/in/jiaxing-he-43b91523b/\nNaturalLanguageProcesscourseproject Sep.2021—Dec.2021\nGuangdongUniversityofForeignStudy Medford,state\n• Theprimarygoalofthisprojectistocategorizecustomerreviewsintodistincttypesandperformsemanticanalysisonthe\ncollecteddata.(technique:re/python/pytorch/multi-objectclassification)\n• WritingcodeaboutTextDataprocessing,LSTM/GRUModeling,andModeltuning.(Latex,recurrentneuralnetwork,textdata\npreprocessing,SQL,shell,GoogleCloudPlatform)\nRELATEDCOURSE\nMachineLearningandDataMining; Algorithm; StatisticalPatternRecognition; BayesianDeepLearning; Deep\nLearning; Statistic; BigData; C; MultipleVariableStatistic; DatabaseSystem;\n10/07/2024 09:57 Resume 2/2",
+      "metadata": {
+        "width": 612,
+        "height": 792
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Failed Prompt 
+You are analyzing the research areas for different Graduate Applicants {{ input.applicant_id }}. 
+For each applicant {{ input.applicant_id }} you have multiple projects {{input.project }} that are in different areas of specialization {{ reduce_key }}
+
+{% for input in inputs}
+Project : {{ input.project }}
+Applicant : {{ input.applicant_id }}
+{% endfor %}
+
+For each of the areas summarize the details of each project for each of the applicant
+
+
+
+
+You have multiple {{ reduce_key[1] }} each having multiple projects along with the corresponding {{ reduce_key[0] }} of the project. 
+For each of the pair of applicant and area provide a summary of the projects. 
+
+
+

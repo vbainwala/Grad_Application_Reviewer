@@ -1,0 +1,78 @@
+datasets:
+  apps:
+    path: json_documents/merged_file.json
+    type: file
+
+default_model: gpt-4o-mini
+
+operations:
+  - name: extract_research_fit
+    type: map
+    output:
+      schema:
+        research_experience: "list[{research_area: string,projects: string,skills: list[string],description: string,collaboration: string,recommendation: string}]"       
+    prompt: |
+      Analyze the following personal statement and recommendation letters for {{ input.ID }}:
+
+      Personal Statement:
+      {{ input.Application.SOP }}
+
+      Recommendation Letters:
+      {{ input.Application.Recommendation_Letters }}
+
+      Task:
+      Extract the main research experience discussed in the personal statement, focusing on:
+
+        •	Projects and research done in the past.
+        •	Technical skills applied by the applicant in the projects.
+        •	A detailed description of each project/research.
+        •	Collaboration skills demonstrated.
+
+      Organize the extracted details by categorizing them under the different areas of research provided in {{ input.Application.Research_Areas }}. 
+      For each research area, create a dictionary containing all the associated projects and their respective details. 
+      Match and include relevant information from the recommendation letters that corroborates the research experience.
+
+      Output Format:
+        "research_experience": [
+          {
+            "research_area": "Research Area 1",
+            "project": "Name of Research Experience/Project",
+            "skills": ["Applicant's associated technical skills"],
+            "description": "Detailed description of the project/research",
+            "collaboration": "Description of collaboration skills",
+            "recommendation": "Matching information in the recommendation letter"
+          },
+          {
+            "research_area": "Research Area 1",
+            "project": "Another Research Experience/Project",
+            "skills": ["Technical skills"],
+            "description": "Description",
+            "collaboration": "Collaboration skills",
+            "recommendation": "Matching recommendation details"
+          },
+          {
+            "research_area": "Research Area 2",
+            "project": "Name of Research Experience/Project",
+            "skills": ["Applicant's associated technical skills"],
+            "description": "Detailed description of the project/research",
+            "collaboration": "Description of collaboration skills",
+            "recommendation": "Matching information in the recommendation letter"
+          }
+        ]
+
+  - name: research_area_reduce
+    type: reduce
+    reduce_key: research_area
+    
+
+pipeline:
+  steps:
+    - name: grad_school_app_extraction
+      input: apps
+      operations:
+        - extract_research_fit
+        # - categorise_research_area
+  output:
+    type: file
+    path: grad_school_app_summaries.json
+    intermediate_dir: intermediate_results
